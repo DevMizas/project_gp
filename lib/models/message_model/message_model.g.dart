@@ -6,10 +6,10 @@ part of 'message_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Message _$MessageFromJson(Map<String, dynamic> json) =>
-    Message(role: json['role'] as String, content: json['content'] as String);
+MessageModel _$MessageModelFromJson(Map<String, dynamic> json) => MessageModel(
+  role: json['role'] as String,
+  content: json['content'] as String,
+);
 
-Map<String, dynamic> _$MessageToJson(Message instance) => <String, dynamic>{
-  'role': instance.role,
-  'content': instance.content,
-};
+Map<String, dynamic> _$MessageModelToJson(MessageModel instance) =>
+    <String, dynamic>{'role': instance.role, 'content': instance.content};
