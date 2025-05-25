@@ -9,7 +9,7 @@ import 'infra/repository/repository.dart';
 Future<void> main() async {
   await dotenv.load();
   final geminiApiKey = dotenv.env['GEMINI_API_KEY']!;
-  final geminiService = GptService(geminiApiKey);
+  final geminiService = GeminiService(geminiApiKey);
   final response = ChatRepo(geminiService);
 
   runApp(MyApp(response));

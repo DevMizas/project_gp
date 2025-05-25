@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:project_gpt/models/models.dart';
 
-class GptService {
+class GeminiService {
   final String apiKey;
 
-  GptService(this.apiKey);
+  GeminiService(this.apiKey);
 
   Future<MessageModel> sendMessage(String content) async {
     final url = Uri.parse(

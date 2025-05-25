@@ -1,1 +1,1 @@
-export 'gpt_services/gpt_services.dart';
+export 'gemini_services/gemini_services.dart';

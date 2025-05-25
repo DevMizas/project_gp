@@ -2,7 +2,7 @@ import 'package:project_gpt/infra/services/services.dart';
 import 'package:project_gpt/models/models.dart';
 
 class ChatRepo {
-  final GptService geminiService;
+  final GeminiService geminiService;
 
   ChatRepo(this.geminiService);
 
