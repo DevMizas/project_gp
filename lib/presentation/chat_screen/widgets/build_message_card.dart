@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_gpt/constants/colors_theme.dart';
 
 class BuildMessageCard extends StatelessWidget {
   final String text;
@@ -21,7 +22,7 @@ class BuildMessageCard extends StatelessWidget {
           maxWidth: MediaQuery.of(context).size.width * 0.75,
         ),
         decoration: BoxDecoration(
-          color: isUser ? Colors.blue[100] : Colors.grey[300],
+          color: isUser ? Colors.deepPurpleAccent : Colors.grey.shade300,
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(16),
             topRight: const Radius.circular(16),
@@ -31,7 +32,10 @@ class BuildMessageCard extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: const TextStyle(fontSize: 16),
+          style: TextStyle(
+            fontSize: 16,
+            color: isUser ? ColorsScheme.white : ColorsScheme.black,
+          ),
         ),
       ),
     );

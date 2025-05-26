@@ -22,11 +22,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: BlocProvider(
-        create: (_) => ChatBlocViewModel(response),
-        child: ChatScreenViewModel(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => ChatBlocViewModel(response)),
+        BlocProvider(create: (_) => ThemeBlockViewModel()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: BlocProvider(
+          create: (_) => ChatBlocViewModel(response),
+          child: ChatScreenViewModel(),
+        ),
       ),
     );
   }
