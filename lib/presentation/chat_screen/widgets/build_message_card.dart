@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:project_gpt/constants/colors_theme.dart';
 
 class BuildMessageCard extends StatelessWidget {
@@ -30,11 +31,15 @@ class BuildMessageCard extends StatelessWidget {
             bottomRight: isUser ? Radius.zero : const Radius.circular(16),
           ),
         ),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 16,
-            color: isUser ? ColorsScheme.white : ColorsScheme.black,
+        child: MarkdownBody(
+          data: text,
+          styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
+            p: TextStyle(
+              fontSize: 16,
+              color: isUser
+                  ? ColorsScheme.white
+                  : ColorsScheme.black,
+            ),
           ),
         ),
       ),

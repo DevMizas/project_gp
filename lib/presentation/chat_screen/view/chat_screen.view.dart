@@ -18,8 +18,10 @@ class _ChatScreenState extends State<ChatScreenViewModel> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Chat Quase Gemini',
-          style: TextStyle(color: isDark ? ColorsScheme.white54 : ColorsScheme.black,),
+          'Chat',
+          style: TextStyle(
+            color: isDark ? ColorsScheme.white54 : ColorsScheme.black,
+          ),
         ),
          actions: [
           IconButton(
